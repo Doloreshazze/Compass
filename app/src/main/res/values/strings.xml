@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Compass</string>
+    <string name="message_calibration">calibration required</string>
+    <string name="message_precision1">high accuracy</string>
+    <string name="message_precision2">average accuracy</string>
+    <string name="message_precision3">low accuracy</string>
+    <string name="message_precision4">unreliable accuracy</string>
+    <string name="message_precision5">unknown accuracy</string>
+    <string name="message_sensors">no sensors</string>
+    <string name="message_manual">rotate the phone until the accuracy is high</string>
+    <string name="bt_back">back</string>
+    <string name="orientation1">N</string>
+    <string name="orientation2">NNE</string>
+    <string name="orientation3">NE</string>
+    <string name="orientation4">EES</string>
+    <string name="orientation5">E</string>
+    <string name="orientation6">SEE</string>
+    <string name="orientation7">SE</string>
+    <string name="orientation8">SSE</string>
+    <string name="orientation9">S</string>
+    <string name="orientation10">SSW</string>
+    <string name="orientation11">SW</string>
+    <string name="orientation12">SWW</string>
+    <string name="orientation13">W</string>
+    <string name="orientation14">WWN</string>
+    <string name="orientation15">NW</string>
+    <string name="orientation16">NNW</string>
+    <string name="orientation17">UNKNOW</string>
+    <string name="calibrationButton">button to perform calibration</string>
+    <string name="goToCalibrationButton">Calibration</string>
+</resources>

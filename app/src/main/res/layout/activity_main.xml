@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/azimuth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/btCalibration"
+        app:layout_constraintEnd_toEndOf="@+id/limb"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="@+id/limb"
+        app:layout_constraintTop_toBottomOf="@+id/limb"
+        app:layout_constraintVertical_bias="0.496" />
+
+    <ImageView
+        android:id="@+id/earth"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/limb"
+        app:layout_constraintEnd_toEndOf="@+id/limb"
+        app:layout_constraintStart_toStartOf="@+id/limb"
+        app:layout_constraintTop_toTopOf="@+id/limb"
+        app:srcCompat="@drawable/earth" />
+
+    <ImageView
+        android:id="@+id/redArrow"
+        android:layout_width="10dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/earth"
+        app:layout_constraintEnd_toEndOf="@+id/limb"
+        app:layout_constraintStart_toStartOf="@+id/limb"
+        app:layout_constraintTop_toTopOf="@+id/limb"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/red_arrow" />
+
+    <ImageView
+        android:id="@+id/limb"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adView"
+        app:layout_constraintVertical_bias="0.184"
+        app:srcCompat="@drawable/limb" />
+
+    <TextView
+        android:id="@+id/tvDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="NNW"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/azimuth"
+        app:layout_constraintEnd_toEndOf="@+id/limb"
+        app:layout_constraintTop_toTopOf="@+id/azimuth"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-9400779051238454/5646794569"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btCalibration"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:onClick="onClickCalibrationActivity"
+        android:text="Calibration"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

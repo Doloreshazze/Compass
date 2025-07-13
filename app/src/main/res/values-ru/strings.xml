@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Компас</string>
+    <string name="message_calibration">необходима калибровка</string>
+    <string name="message_precision1">высокая точность</string>
+    <string name="message_precision2">средняя точность</string>
+    <string name="message_precision3">низкая точность</string>
+    <string name="message_precision4">недостоверная точность</string>
+    <string name="message_precision5">неизвестная точность</string>
+    <string name="message_sensors">отсутсвуют датчики</string>
+    <string name="message_manual">вращайте телефон пока точность не станет высокой</string>
+    <string name="bt_back">назад</string>
+    <string name="orientation1">С</string>
+    <string name="orientation2">ССВ</string>
+    <string name="orientation3">СВ</string>
+    <string name="orientation4">СВВ</string>
+    <string name="orientation5">В</string>
+    <string name="orientation6">ЮВВ</string>
+    <string name="orientation7">ЮВ</string>
+    <string name="orientation8">ЮЮВ</string>
+    <string name="orientation9">Ю</string>
+    <string name="orientation10">ЮЮЗ</string>
+    <string name="orientation11">ЮЗ</string>
+    <string name="orientation12">ЮЗЗ</string>
+    <string name="orientation13">З</string>
+    <string name="orientation14">СЗЗ</string>
+    <string name="orientation15">СЗ</string>
+    <string name="orientation16">ССЗ</string>
+    <string name="orientation17">НЕИЗВЕСТНО</string>
+    <string name="calibrationButton">кнопка для калибровки</string>
+    <string name="goToCalibrationButton">Калибровка</string>
+</resources>
