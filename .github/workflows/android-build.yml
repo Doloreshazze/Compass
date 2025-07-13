@@ -20,14 +20,27 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: 17
+          java-version: '17' # Убедитесь, что версия JDK совместима с вашим AGP/Gradle
+
+      # >>> ВАЖНО: Добавлен шаг для установки Android SDK <<<
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3 # Используем v3, так как v2 устарела
+        # Вы можете добавить 'with' блок для указания конкретных версий, если нужно:
+        # with:
+        #   api-level: 34 # Например, для компиляции под API 34
+        #   build-tools: "34.0.0" # Конкретная версия Build Tools
+        #   ndk: "25.2.9519653" # Если вы используете NDK
+        #   cmake: "3.22.1"   # Если вы используете CMake
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
-      # 🧹 Удаление кэша Gradle вручную (если был повреждён)
-      - name: Remove Gradle caches manually
-        run: rm -rf $HOME/.gradle/caches
+      # 🧹 Удаление кэша Gradle вручную (если был повреждён) - ОСТОРОЖНО
+      # Этот шаг может замедлить сборку, так как кэш будет пересоздаваться.
+      # Используйте, только если есть реальные проблемы с кэшем.
+      # Рассмотрите использование actions/cache для кэширования Gradle.
+      # - name: Remove Gradle caches manually 
+      #   run: rm -rf $HOME/.gradle/caches 
 
       - name: Clean build directory
         run: ./gradlew clean
@@ -37,3 +50,5 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew assembleDebug
+        # Для более надежной сборки релизной версии (если есть signing config):
+        # run: ./gradlew assembleRelease
